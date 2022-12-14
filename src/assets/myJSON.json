@@ -1,0 +1,92 @@
+[
+  {
+    "id": 0,
+    "name": "Sun",
+    "imagePath": "/assets/images/sun2.png",
+    "height": "500px",
+    "width": "500px",
+    "soundPath": "/assets/sounds/sun.ogg",
+    "mime": "audio/ogg"
+  },
+  {
+    "id": 1,
+    "name": "Mercury",
+    "imagePath": "/assets/images/mercury.png",
+    "height": "400px",
+    "width": "400px",
+    "soundPath": "/assets/sounds/mercury.ogg",
+    "mime": "audio/ogg"
+  },
+  {
+    "id": 2,
+    "name": "Venus",
+    "imagePath": "/assets/images/venus.png",
+    "height": "400px",
+    "width": "400px",
+    "soundPath": "/assets/sounds/sun.ogg",
+    "mime": "audio/ogg"
+  },
+  {
+    "id": 3,
+    "name": "Earth",
+    "imagePath": "/assets/images/earth.webp",
+    "height": "400px",
+    "width": "400px",
+    "soundPath": "/assets/sounds/sun.ogg",
+    "mime": "audio/ogg"
+  },
+  {
+    "id": 4,
+    "name": "Mars",
+    "imagePath": "/assets/images/mars.png",
+    "height": "400px",
+    "width": "400px",
+    "soundPath": "/assets/sounds/sun.ogg",
+    "mime": "audio/ogg"
+  },
+  {
+    "id": 5,
+    "name": "Jupiter",
+    "imagePath": "/assets/images/jupiter.png",
+    "height": "400px",
+    "width": "400px",
+    "soundPath": "/assets/sounds/sun.ogg",
+    "mime": "audio/ogg"
+  },
+  {
+    "id": 6,
+    "name": "Saturn",
+    "imagePath": "/assets/images/saturn.png",
+    "height": "400px",
+    "width": "800px",
+    "soundPath": "/assets/sounds/sun.ogg",
+    "mime": "audio/ogg"
+  },
+  {
+    "id": 7,
+    "name": "Uranus",
+    "imagePath": "/assets/images/uranus.png",
+    "height": "400px",
+    "width": "400px",
+    "soundPath": "/assets/sounds/sun.ogg",
+    "mime": "audio/ogg"
+  },
+  {
+    "id": 8,
+    "name": "Neptue",
+    "imagePath": "/assets/images/neptune.png",
+    "height": "400px",
+    "width": "400px",
+    "soundPath": "/assets/sounds/sun.ogg",
+    "mime": "audio/ogg"
+  },
+  {
+    "id": 9,
+    "name": "Pluto",
+    "imagePath": "/assets/images/pluto.png",
+    "height": "400px",
+    "width": "400px",
+    "soundPath": "/assets/sounds/sun.ogg",
+    "mime": "audio/ogg"
+  }
+]
