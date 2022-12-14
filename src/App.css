@@ -7,11 +7,15 @@ li {
     list-style-type: none;
 }
 
-img {
-    color: #000;
+h1 {
+    font-family: 'Zen Dots', cursive;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 80px 0;
 }
 
-button {
-    padding: 0cm;
-    color: #000;
+.planetContainer {
+    display: flex;
+    flex-wrap: wrap;
+
 }
