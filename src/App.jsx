@@ -8,10 +8,15 @@ export default function App() {
         <div className="app">
             <h1>Solar System Sounds</h1>
             <div className="planetContainer">
-                <Planet planetName="jupiter" />
                 <Planet planetName="sun" />
                 <Planet planetName="mercury" />
+                <Planet planetName="venus" />
+                <Planet planetName="mars" />
                 <Planet planetName="earth" />
+                <Planet planetName="jupiter" />
+                <Planet planetName="saturn" />
+                <Planet planetName="uranus" />
+                <Planet planetName="neptune" />
             </div>
         </div>
     );
