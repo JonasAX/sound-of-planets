@@ -1,6 +1,8 @@
 # What is this repository?
 
-This is a project in React.js to show planets with their respective sounds.
+This is under development. Not ready yet.
+
+This is a project in React.js to show sounds of planets.
 
 ## Available Scripts
 
