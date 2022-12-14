@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# What is this repository?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a project in React.js to show planets with their respective sounds.
 
 ## Available Scripts
 
