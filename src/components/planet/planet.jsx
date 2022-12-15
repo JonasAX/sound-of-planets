@@ -2,7 +2,6 @@ import "./planet.css";
 import { useEffect } from "react";
 
 function Planet({ planetName, planetSound, setPlanetSound }) {
-
     // Play the sound inserted in planetName
     useEffect(() => {
         // By default, every useEffect runs on mount. This should not happen here
@@ -71,14 +70,13 @@ function Planet({ planetName, planetSound, setPlanetSound }) {
     };
 
     return (
-        <div className="planet">
+        <div className="planet" onClick={() => playPlanetSound()} >
             <p className="planetTitle">{planets[planetName]["title"]}</p>
             <img
                 className="picture"
                 src={planets[planetName]["image"]}
                 alt={planets[planetName]["title"]}
             />
-            <button onClick={() => playPlanetSound()}>Play</button>
         </div>
     );
 }
