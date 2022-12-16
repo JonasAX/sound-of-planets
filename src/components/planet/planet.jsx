@@ -13,53 +13,53 @@ function Planet({ planetName, planetSound, setPlanetSound }) {
     const planets = {
         sun: {
             title: "sun",
-            image: "/planets/sun.jpg",
-            sound: "/sounds/sun.mp3",
+            image: "./sound-of-planets/planets/sun.jpg",
+            sound: "./sound-of-planets/sounds/sun.mp3",
         },
         mercury: {
             title: "mercury",
-            image: "/planets/mercury.jpg",
-            sound: "/sounds/mercury.mp3",
+            image: "./sound-of-planets/planets/mercury.jpg",
+            sound: "./sound-of-planets/sounds/mercury.mp3",
         },
         venus: {
             title: "venus",
-            image: "/planets/venus.jpg",
-            sound: "/sounds/venus.mp3",
+            image: "./sound-of-planets/planets/venus.jpg",
+            sound: "./sound-of-planets/sounds/venus.mp3",
         },
         mars: {
             title: "mars",
-            image: "/planets/mars.png",
-            sound: "/sounds/mars.mp3",
+            image: "./sound-of-planets/planets/mars.png",
+            sound: "./sound-of-planets/sounds/mars.mp3",
         },
         earth: {
             title: "earth",
-            image: "/planets/earth.webp",
-            sound: "/sounds/earth.mp3",
+            image: "./sound-of-planets/planets/earth.webp",
+            sound: "./sound-of-planets/sounds/earth.mp3",
         },
         jupiter: {
             title: "jupiter",
-            image: "/planets/jupiter.png",
-            sound: "/sounds/jupiter.mp3",
+            image: "./sound-of-planets/planets/jupiter.png",
+            sound: "./sound-of-planets/sounds/jupiter.mp3",
         },
         saturn: {
             title: "saturn",
-            image: "/planets/saturn.gif",
-            sound: "/sounds/saturn.mp3",
+            image: "./sound-of-planets/planets/saturn.gif",
+            sound: "./sound-of-planets/sounds/saturn.mp3",
         },
         uranus: {
             title: "uranus",
-            image: "/planets/uranus.png",
-            sound: "/sounds/uranus.mp3",
+            image: "./sound-of-planets/planets/uranus.png",
+            sound: "./sound-of-planets/sounds/uranus.mp3",
         },
         neptune: {
             title: "neptune",
-            image: "/planets/neptune.jpg",
-            sound: "/sounds/neptune.mp3",
+            image: "./sound-of-planets/planets/neptune.jpg",
+            sound: "./sound-of-planets/sounds/neptune.mp3",
         },
         pluto: {
             title: "pluto",
-            image: "/planets/pluto.jpg",
-            sound: "/sounds/pluto-real.mp3",
+            image: "./sound-of-planets/planets/pluto.jpg",
+            sound: "./sound-of-planets/sounds/pluto-real.mp3",
         },
     };
 
