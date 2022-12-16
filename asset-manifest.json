@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sound-of-planets/static/css/main.f668fa55.css",
-    "main.js": "/sound-of-planets/static/js/main.94e59323.js",
+    "main.js": "/sound-of-planets/static/js/main.dc1ac9df.js",
     "static/js/787.1e1b5c88.chunk.js": "/sound-of-planets/static/js/787.1e1b5c88.chunk.js",
     "index.html": "/sound-of-planets/index.html",
     "main.f668fa55.css.map": "/sound-of-planets/static/css/main.f668fa55.css.map",
-    "main.94e59323.js.map": "/sound-of-planets/static/js/main.94e59323.js.map",
+    "main.dc1ac9df.js.map": "/sound-of-planets/static/js/main.dc1ac9df.js.map",
     "787.1e1b5c88.chunk.js.map": "/sound-of-planets/static/js/787.1e1b5c88.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f668fa55.css",
-    "static/js/main.94e59323.js"
+    "static/js/main.dc1ac9df.js"
   ]
 }
