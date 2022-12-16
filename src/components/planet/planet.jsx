@@ -1,5 +1,27 @@
 import "./planet.css";
 import { useEffect } from "react";
+// images
+import sunImage from "../../assets/sun.jpg"
+import mercuryImage from "../../assets/mercury.jpg"
+import venusImage from "../../assets/venus.jpg"
+import earthImage from "../../assets/earth.webp"
+import marsImage from "../../assets/mars.png"
+import jupiterImage from "../../assets/jupiter.png"
+import saturnImage from "../../assets/saturn.gif"
+import uranusImage from "../../assets/uranus.png"
+import neptuneImage from "../../assets/neptune.jpg"
+import plutoImage from "../../assets/pluto.jpg"
+// sounds
+import sunSound from "../../assets/sun.mp3"
+import mercurySound from "../../assets/mercury.mp3"
+import venusSound from "../../assets/venus.mp3"
+import earthSound from "../../assets/earth.mp3"
+import marsSound from "../../assets/mars.mp3"
+import jupiterSound from "../../assets/jupiter.mp3"
+import saturnSound from "../../assets/saturn.mp3"
+import uranusSound from "../../assets/uranus.mp3"
+import neptuneSound from "../../assets/neptune.mp3"
+import plutoSound from "../../assets/pluto.mp3"
 
 function Planet({ planetName, planetSound, setPlanetSound }) {
     // Play the sound inserted in planetName
@@ -13,53 +35,53 @@ function Planet({ planetName, planetSound, setPlanetSound }) {
     const planets = {
         sun: {
             title: "sun",
-            image: "./sound-of-planets/planets/sun.jpg",
-            sound: "./sound-of-planets/sounds/sun.mp3",
+            image: sunImage,
+            sound: sunSound,
         },
         mercury: {
             title: "mercury",
-            image: "./sound-of-planets/planets/mercury.jpg",
-            sound: "./sound-of-planets/sounds/mercury.mp3",
+            image: mercuryImage,
+            sound: mercurySound,
         },
         venus: {
             title: "venus",
-            image: "./sound-of-planets/planets/venus.jpg",
-            sound: "./sound-of-planets/sounds/venus.mp3",
+            image: venusImage,
+            sound: venusSound,
         },
         mars: {
             title: "mars",
-            image: "./sound-of-planets/planets/mars.png",
-            sound: "./sound-of-planets/sounds/mars.mp3",
+            image: marsImage,
+            sound: marsSound,
         },
         earth: {
             title: "earth",
-            image: "./sound-of-planets/planets/earth.webp",
-            sound: "./sound-of-planets/sounds/earth.mp3",
+            image: earthImage,
+            sound: earthSound,
         },
         jupiter: {
             title: "jupiter",
-            image: "./sound-of-planets/planets/jupiter.png",
-            sound: "./sound-of-planets/sounds/jupiter.mp3",
+            image: jupiterImage,
+            sound: jupiterSound,
         },
         saturn: {
             title: "saturn",
-            image: "./sound-of-planets/planets/saturn.gif",
-            sound: "./sound-of-planets/sounds/saturn.mp3",
+            image: saturnImage,
+            sound: saturnSound,
         },
         uranus: {
             title: "uranus",
-            image: "./sound-of-planets/planets/uranus.png",
-            sound: "./sound-of-planets/sounds/uranus.mp3",
+            image: uranusImage,
+            sound: uranusSound,
         },
         neptune: {
             title: "neptune",
-            image: "./sound-of-planets/planets/neptune.jpg",
-            sound: "./sound-of-planets/sounds/neptune.mp3",
+            image: neptuneImage,
+            sound: neptuneSound,
         },
         pluto: {
             title: "pluto",
-            image: "./sound-of-planets/planets/pluto.jpg",
-            sound: "./sound-of-planets/sounds/pluto-real.mp3",
+            image: plutoImage,
+            sound: plutoSound,
         },
     };
 
