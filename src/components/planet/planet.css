@@ -15,6 +15,14 @@
 }
 
 .planetTitle {
-    font-family: 'Zen Dots', cursive;
+    font-family: "Zen Dots", cursive;
     text-transform: uppercase;
+}
+
+.grow {
+    transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
 }

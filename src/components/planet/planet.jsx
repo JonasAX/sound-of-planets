@@ -75,7 +75,7 @@ function Planet({ planetName, planetSound, setPlanetSound }) {
     };
 
     return (
-        <div className="planet" onClick={() => playPlanetSound()} >
+        <div className="planet grow" onClick={() => playPlanetSound()} >
             <p className="planetTitle">{planets[planetName]["title"]}</p>
             <img
                 className="picture"
