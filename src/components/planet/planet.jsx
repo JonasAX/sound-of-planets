@@ -14,47 +14,52 @@ function Planet({ planetName, planetSound, setPlanetSound }) {
         sun: {
             title: "sun",
             image: "/planets/sun.jpg",
-            sound: "/sounds/sample.mp3",
+            sound: "/sounds/sun.mp3",
         },
         mercury: {
             title: "mercury",
             image: "/planets/mercury.jpg",
-            sound: "/sounds/sample.mp3",
+            sound: "/sounds/mercury.mp3",
         },
         venus: {
             title: "venus",
             image: "/planets/venus.jpg",
-            sound: "/sounds/sample.mp3",
+            sound: "/sounds/venus.mp3",
         },
         mars: {
             title: "mars",
             image: "/planets/mars.png",
-            sound: "/sounds/sample.mp3",
+            sound: "/sounds/mars.mp3",
         },
         earth: {
             title: "earth",
             image: "/planets/earth.webp",
-            sound: "/sounds/sample.mp3",
+            sound: "/sounds/earth.mp3",
         },
         jupiter: {
             title: "jupiter",
             image: "/planets/jupiter.png",
-            sound: "/sounds/sample.mp3",
+            sound: "/sounds/jupiter.mp3",
         },
         saturn: {
             title: "saturn",
             image: "/planets/saturn.gif",
-            sound: "/sounds/sample.mp3",
+            sound: "/sounds/saturn.mp3",
         },
         uranus: {
             title: "uranus",
             image: "/planets/uranus.png",
-            sound: "/sounds/sample.mp3",
+            sound: "/sounds/uranus.mp3",
         },
         neptune: {
             title: "neptune",
             image: "/planets/neptune.jpg",
-            sound: "/sounds/sample.mp3",
+            sound: "/sounds/neptune.mp3",
+        },
+        pluto: {
+            title: "pluto",
+            image: "/planets/pluto.jpg",
+            sound: "/sounds/pluto-real.mp3",
         },
     };
 
@@ -66,7 +71,7 @@ function Planet({ planetName, planetSound, setPlanetSound }) {
 
         // Bring the audio file to useState, so the useEffect will play it.
         // The audio file is stored outside this component in order to make it stoppable by another component.
-        setPlanetSound(new Audio("/sounds/sample.mp3"));
+        setPlanetSound(new Audio(planets[planetName]["sound"]));
     };
 
     return (

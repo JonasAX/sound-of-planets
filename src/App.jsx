@@ -55,6 +55,11 @@ export default function App() {
                     planetSound={planetSound}
                     setPlanetSound={setPlanetSound}
                 />
+                <Planet
+                    planetName="pluto"
+                    planetSound={planetSound}
+                    setPlanetSound={setPlanetSound}
+                />
             </div>
         </div>
     );
