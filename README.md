@@ -2,7 +2,7 @@
 
 This is under development. Not ready yet.
 
-This is a project in React.js to show sounds of planets.
+This is a project in React.js to show sounds of planets. Based on a meme.
 
 ## Available Scripts
 
