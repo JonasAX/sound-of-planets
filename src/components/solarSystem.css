@@ -1,0 +1,4 @@
+.containerOfPlanets {
+  display: flex;
+  flex-wrap: wrap;
+}
