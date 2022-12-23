@@ -1,0 +1,13 @@
+header {
+    border-bottom: 2px solid #aaa;
+    padding-top: 5px;
+    position: sticky;
+    top: 0px;
+    background-color: black;
+}
+
+h1 {
+    font-family: "Zen Dots", cursive;
+    text-transform: uppercase;
+    text-align: center;
+}
