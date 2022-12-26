@@ -23,6 +23,7 @@ import plutoSound from "../assets/pluto.mp3";
 
 import Planet from "./planet/Planet";
 import "./solarSystem.css";
+import {useEffect} from 'react'
 
 const planets = {
   sun: {
@@ -87,28 +88,37 @@ const planets = {
   },
 };
 
-let audio = new Audio();
-
-const planetClicked = (name) => {
-  const isPlaying = () => !audio.paused;
-  const isTheSame = () =>
-    audio.getAttribute("src") === planets[name]["sound"] ? true : false;
-
-  if (isTheSame() && isPlaying()) {
-    audio.load();
-    return;
-  } else if (isTheSame() && !isPlaying()) {
-    audio.play();
-    return;
+const SolarSystem = ({pause}) => {
+  useEffect( ()=>{if (pause) {
+    // audio.pause()
+    console.log("Pause this")
   } else {
-    audio.load();
-    audio = new Audio(planets[name]["sound"]);
-    audio.volume = planets[name]["volume"];
-    audio.play();
+    console.log("Play this")
   }
-};
+}, [pause])
 
-const SolarSystem = () => {
+  let audio = new Audio();
+
+  const planetClicked = (name) => {
+    const isPlaying = () => !audio.paused;
+    const isTheSame = () =>
+      audio.getAttribute("src") === planets[name]["sound"] ? true : false;
+  
+    if (isTheSame() && isPlaying()) {
+      audio.load();
+      return;
+    } else if (isTheSame() && !isPlaying()) {
+      audio.play();
+      return;
+    } else {
+      audio.load();
+      audio = new Audio(planets[name]["sound"]);
+      audio.volume = planets[name]["volume"];
+      audio.play();
+    }
+  };
+
+
   return (
     <div className="containerOfPlanets">
       <Planet

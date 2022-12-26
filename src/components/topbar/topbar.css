@@ -1,13 +1,21 @@
 header {
-    border-bottom: 2px solid #aaa;
-    padding-top: 5px;
-    position: sticky;
-    top: 0px;
-    background-color: black;
+  border-bottom: 2px solid #aaa;
+  padding-top: 5px;
+  position: sticky;
+  top: 0px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 h1 {
-    font-family: "Zen Dots", cursive;
-    text-transform: uppercase;
-    text-align: center;
+  font-family: "Zen Dots", cursive;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+button {
+  padding: 8px;
 }
