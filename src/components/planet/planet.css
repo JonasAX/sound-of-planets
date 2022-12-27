@@ -1,5 +1,6 @@
 .planet {
     border: 2px solid grey;
+    background-color: black;
     border-radius: 20px;
     width: 400px;
     height: 300px;
@@ -19,14 +20,19 @@
     text-transform: uppercase;
 }
 
-.grow {
-    transition: all 0.2s ease-in-out;
-}
+.grow {}
+    
 
 .grow:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
+    transition: all 0.1s ease-in-out;
 }
 
 .grow:active {
     transform: scale(0.9);
 }
+
+::selection {
+    color: grey;
+    background: rgba(128, 128, 128, 0);
+  }
