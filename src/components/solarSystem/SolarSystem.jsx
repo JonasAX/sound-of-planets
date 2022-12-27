@@ -1,27 +1,27 @@
 // images
-import sunImage from "../assets/sun.jpg";
-import mercuryImage from "../assets/mercury.jpg";
-import venusImage from "../assets/venus.jpg";
-import earthImage from "../assets/earth.webp";
-import marsImage from "../assets/mars.png";
-import jupiterImage from "../assets/jupiter.png";
-import saturnImage from "../assets/saturn.gif";
-import uranusImage from "../assets/uranus.png";
-import neptuneImage from "../assets/neptune.jpg";
-import plutoImage from "../assets/pluto.jpg";
+import sunImage from "../../assets/sun.jpg";
+import mercuryImage from "../../assets/mercury.jpg";
+import venusImage from "../../assets/venus.jpg";
+import earthImage from "../../assets/earth.webp";
+import marsImage from "../../assets/mars.png";
+import jupiterImage from "../../assets/jupiter.png";
+import saturnImage from "../../assets/saturn.gif";
+import uranusImage from "../../assets/uranus.png";
+import neptuneImage from "../../assets/neptune.jpg";
+import plutoImage from "../../assets/pluto.jpg";
 // sounds
-import sunSound from "../assets/sun.mp3";
-import mercurySound from "../assets/mercury.mp3";
-import venusSound from "../assets/venus.mp3";
-import earthSound from "../assets/earth.mp3";
-import marsSound from "../assets/mars.mp3";
-import jupiterSound from "../assets/jupiter.mp3";
-import saturnSound from "../assets/saturn.mp3";
-import uranusSound from "../assets/uranus.mp3";
-import neptuneSound from "../assets/neptune.mp3";
-import plutoSound from "../assets/pluto.mp3";
+import sunSound from "../../assets/sun.mp3";
+import mercurySound from "../../assets/mercury.mp3";
+import venusSound from "../../assets/venus.mp3";
+import earthSound from "../../assets/earth.mp3";
+import marsSound from "../../assets/mars.mp3";
+import jupiterSound from "../../assets/jupiter.mp3";
+import saturnSound from "../../assets/saturn.mp3";
+import uranusSound from "../../assets/uranus.mp3";
+import neptuneSound from "../../assets/neptune.mp3";
+import plutoSound from "../../assets/pluto.mp3";
 
-import Planet from "./planet/Planet";
+import Planet from "../planet/Planet";
 import "./solarSystem.css";
 import { useEffect } from "react";
 

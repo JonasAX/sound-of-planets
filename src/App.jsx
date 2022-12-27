@@ -1,5 +1,5 @@
 import "./App.css";
-import SolarSystem from "./components/SolarSystem";
+import SolarSystem from "./components/solarSystem/SolarSystem";
 import Topbar from "./components/topbar/Topbar";
 import { useState } from "react";
 
