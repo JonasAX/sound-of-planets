@@ -23,7 +23,7 @@ import plutoSound from "../assets/pluto.mp3";
 
 import Planet from "./planet/Planet";
 import "./solarSystem.css";
-import {useEffect} from 'react'
+import { useEffect } from "react";
 
 const planets = {
   sun: {
@@ -88,36 +88,43 @@ const planets = {
   },
 };
 
-const SolarSystem = ({pause}) => {
-  useEffect( ()=>{if (pause) {
-    // audio.pause()
-    console.log("Pause this")
+let audio = new Audio();
+
+const planetClicked = (name) => {
+  // Check if the audio is playing and if it`s the same "src"
+  const isPlaying = () => !audio.paused;
+  const isTheSame = () =>
+    audio.getAttribute("src") === planets[name]["sound"] ? true : false;
+
+  // The following logic will add Play/Pause behavior
+  if (isTheSame() && isPlaying()) {
+    audio.load();
+    return;
+  } else if (isTheSame() && !isPlaying()) {
+    audio.play();
+    return;
   } else {
-    console.log("Play this")
+    audio.load();
+    audio = new Audio(planets[name]["sound"]);
+    audio.volume = planets[name]["volume"];
+    audio.play();
   }
-}, [pause])
+};
 
-  let audio = new Audio();
-
-  const planetClicked = (name) => {
-    const isPlaying = () => !audio.paused;
-    const isTheSame = () =>
-      audio.getAttribute("src") === planets[name]["sound"] ? true : false;
-  
-    if (isTheSame() && isPlaying()) {
-      audio.load();
+const SolarSystem = ({ pause }) => {
+  // The following effect acts when the topbar button is clicked
+  // It will play/pause the audio
+  useEffect(() => {
+    // The button have 3 states. "undefined" is necessary because browsers triggers an error
+    // when audio.pause() is executed before user interaction.
+    if (pause === undefined) {
       return;
-    } else if (isTheSame() && !isPlaying()) {
-      audio.play();
-      return;
-    } else {
-      audio.load();
-      audio = new Audio(planets[name]["sound"]);
-      audio.volume = planets[name]["volume"];
+    } else if (pause === true) {
+      audio.pause();
+    } else if (pause === false) {
       audio.play();
     }
-  };
-
+  }, [pause]);
 
   return (
     <div className="containerOfPlanets">
