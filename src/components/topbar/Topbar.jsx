@@ -1,6 +1,6 @@
 import "./topbar.css";
 
-const Topbar = ({ setPause, pause }) => {
+const Topbar = ({ setPause, pause, setDarkMode, darkMode }) => {
   return (
     <header>
       <h1>Solar System Sounds</h1>
@@ -17,6 +17,14 @@ const Topbar = ({ setPause, pause }) => {
       >
         Play/Pause
       </button>
+      <div>
+        <input type="checkbox" id="darkMode" onChange={(event) => setDarkMode(!event.target.checked)}/>
+        <label htmlFor="darkMode" className="label">
+          <span>🌙</span>
+          <span>☀️</span>
+          <div className='ball'></div>
+        </label>
+      </div>
     </header>
   );
 };

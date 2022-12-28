@@ -1,5 +1,6 @@
 // images
 import sunImage from "../../assets/sun.jpg";
+import moonImage from "../../assets/moon.jpg";
 import mercuryImage from "../../assets/mercury.jpg";
 import venusImage from "../../assets/venus.jpg";
 import earthImage from "../../assets/earth.webp";
@@ -11,6 +12,7 @@ import neptuneImage from "../../assets/neptune.jpg";
 import plutoImage from "../../assets/pluto.jpg";
 // sounds
 import sunSound from "../../assets/sun.mp3";
+import moonSound from "../../assets/moon.mp3";
 import mercurySound from "../../assets/mercury.mp3";
 import venusSound from "../../assets/venus.mp3";
 import earthSound from "../../assets/earth.mp3";
@@ -26,6 +28,12 @@ import "./solarSystem.css";
 import { useEffect } from "react";
 
 const planets = {
+  moon: {
+    title: "moon",
+    image: moonImage,
+    sound: moonSound,
+    volume: 0.6,
+  },
   sun: {
     title: "sun",
     image: sunImage,
@@ -111,7 +119,36 @@ const planetClicked = (name) => {
   }
 };
 
-const SolarSystem = ({ pause }) => {
+let sunOrMoon = (
+  <Planet
+    planetName="sun"
+    clicked={planetClicked}
+    img={planets["sun"]["image"]}
+  />
+);
+
+
+const SolarSystem = ({ pause, darkMode }) => {
+  useEffect(() => {
+    if (!darkMode) {
+      sunOrMoon = (
+        <Planet
+          planetName="sun"
+          clicked={planetClicked}
+          img={planets["sun"]["image"]}
+        />
+      );
+    } else if (darkMode) {
+      sunOrMoon = (
+        <Planet
+          planetName="moon"
+          clicked={planetClicked}
+          img={planets["moon"]["image"]}
+        />
+      );
+    }
+  }, [darkMode]);
+
   // The following effect acts when the topbar button is clicked
   // It will play/pause the audio
   useEffect(() => {
@@ -128,11 +165,12 @@ const SolarSystem = ({ pause }) => {
 
   return (
     <div className="containerOfPlanets">
+      {sunOrMoon}
       <Planet
-        planetName="sun"
-        clicked={planetClicked}
-        img={planets["sun"]["image"]}
-      />
+          planetName="moon"
+          clicked={planetClicked}
+          img={planets["moon"]["image"]}
+        />
       <Planet
         planetName="mercury"
         clicked={planetClicked}
