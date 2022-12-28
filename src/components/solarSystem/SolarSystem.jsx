@@ -32,7 +32,7 @@ const planets = {
     title: "moon",
     image: moonImage,
     sound: moonSound,
-    volume: 0.6,
+    volume: 1,
   },
   sun: {
     title: "sun",
