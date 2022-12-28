@@ -10,7 +10,7 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className="app">
-      <Topbar setPause={setPause} pause={pause} setDarkMode={setDarkMode} darkMode={darkMode}/>
+      <Topbar setPause={setPause} pause={pause} setDarkMode={setDarkMode}/>
       <SolarSystem pause={pause} darkMode={darkMode} />
     </div>
   );

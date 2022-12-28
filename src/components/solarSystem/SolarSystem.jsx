@@ -25,7 +25,7 @@ import plutoSound from "../../assets/pluto.mp3";
 
 import Planet from "../planet/Planet";
 import "./solarSystem.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const planets = {
   moon: {
@@ -119,27 +119,28 @@ const planetClicked = (name) => {
   }
 };
 
-let sunOrMoon = (
-  <Planet
-    planetName="sun"
-    clicked={planetClicked}
-    img={planets["sun"]["image"]}
-  />
-);
-
-
 const SolarSystem = ({ pause, darkMode }) => {
+  const [sunOrMoon, setSunOrMoon] = useState(
+    <Planet
+      planetName="sun"
+      clicked={planetClicked}
+      img={planets["sun"]["image"]}
+    />
+  );
+
+  // The following useEffect will change the first "planet" depending on the
+  // fake "dark mode" selection
   useEffect(() => {
-    if (!darkMode) {
-      sunOrMoon = (
+    if (darkMode === "sun") {
+      setSunOrMoon(
         <Planet
           planetName="sun"
           clicked={planetClicked}
           img={planets["sun"]["image"]}
         />
       );
-    } else if (darkMode) {
-      sunOrMoon = (
+    } else if (darkMode === "moon") {
+      setSunOrMoon(
         <Planet
           planetName="moon"
           clicked={planetClicked}
@@ -166,11 +167,6 @@ const SolarSystem = ({ pause, darkMode }) => {
   return (
     <div className="containerOfPlanets">
       {sunOrMoon}
-      <Planet
-          planetName="moon"
-          clicked={planetClicked}
-          img={planets["moon"]["image"]}
-        />
       <Planet
         planetName="mercury"
         clicked={planetClicked}
