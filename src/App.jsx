@@ -1,11 +1,17 @@
 import "./App.css";
-import SolarSystem from "./components/SolarSystem";
+import SolarSystem from "./components/solarSystem/SolarSystem";
+import Topbar from "./components/topbar/Topbar";
+import { useState } from "react";
 
 export default function App() {
+  // This state is for the Topbar play/pause button
+  // Then it is passed to SolarSystem
+  const [pause, setPause] = useState(undefined);
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <div className="app">
-      <h1>Solar System Sounds</h1>
-      <SolarSystem />
+      <Topbar setPause={setPause} pause={pause} setDarkMode={setDarkMode}/>
+      <SolarSystem pause={pause} darkMode={darkMode} />
     </div>
   );
 }
