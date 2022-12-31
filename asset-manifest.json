@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/sound-of-planets/static/css/main.b6412eab.css",
-    "main.js": "/sound-of-planets/static/js/main.7043398c.js",
+    "main.css": "/sound-of-planets/static/css/main.e598ebb4.css",
+    "main.js": "/sound-of-planets/static/js/main.764b8276.js",
     "static/js/787.1e1b5c88.chunk.js": "/sound-of-planets/static/js/787.1e1b5c88.chunk.js",
     "static/media/venus.jpg": "/sound-of-planets/static/media/venus.077d8385b9ed12ab64bb.jpg",
     "static/media/jupiter.png": "/sound-of-planets/static/media/jupiter.4bb2e4f2c9ef09ae2599.png",
     "static/media/mars.mp3": "/sound-of-planets/static/media/mars.1ae9c029bc41a0cbf209.mp3",
     "static/media/earth.mp3": "/sound-of-planets/static/media/earth.41a27d8528df37bbfefb.mp3",
+    "static/media/moon.mp3": "/sound-of-planets/static/media/moon.b3bea266e27353ad5270.mp3",
     "static/media/mercury.mp3": "/sound-of-planets/static/media/mercury.79625db46f8ce943c51e.mp3",
     "static/media/mars.png": "/sound-of-planets/static/media/mars.74ca49ec1ad10b18c1c5.png",
     "static/media/saturn.mp3": "/sound-of-planets/static/media/saturn.9f8b5802ea82d8e85c9b.mp3",
@@ -23,13 +24,14 @@
     "static/media/neptune.jpg": "/sound-of-planets/static/media/neptune.45b7e2d3ec3e3c687f82.jpg",
     "static/media/saturn.gif": "/sound-of-planets/static/media/saturn.33b23f8dcebe743e0ad2.gif",
     "static/media/sun.jpg": "/sound-of-planets/static/media/sun.98aed064ff49390ec398.jpg",
+    "static/media/moon.jpg": "/sound-of-planets/static/media/moon.1d0e74aa1ca397711873.jpg",
     "index.html": "/sound-of-planets/index.html",
-    "main.b6412eab.css.map": "/sound-of-planets/static/css/main.b6412eab.css.map",
-    "main.7043398c.js.map": "/sound-of-planets/static/js/main.7043398c.js.map",
+    "main.e598ebb4.css.map": "/sound-of-planets/static/css/main.e598ebb4.css.map",
+    "main.764b8276.js.map": "/sound-of-planets/static/js/main.764b8276.js.map",
     "787.1e1b5c88.chunk.js.map": "/sound-of-planets/static/js/787.1e1b5c88.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6412eab.css",
-    "static/js/main.7043398c.js"
+    "static/css/main.e598ebb4.css",
+    "static/js/main.764b8276.js"
   ]
 }
