@@ -180,7 +180,7 @@ const SolarSystem = ({ pause, darkMode }) => {
         <CSSTransition
           key={darkMode}
           classNames={transitionClasses}
-          timeout={900}
+          timeout={1000}
         >
           {sunOrMoon}
         </CSSTransition>
