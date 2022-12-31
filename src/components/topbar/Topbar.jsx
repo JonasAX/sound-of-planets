@@ -1,13 +1,22 @@
+import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 import "./topbar.css";
 
-
-
 const Topbar = ({ setPause, pause, setDarkMode }) => {
+  const [darkModeClicked, setDarkModeClicked] = useState(false);
+  function darkModeInfo() {
+    if (!darkModeClicked) {
+      toast.info("This button is not for dark mode, btw.");
+      setDarkModeClicked(true);
+    }
+  }
+
   function handleDarkMode(event) {
     if (event.target.checked) {
-      setDarkMode("moon")
+      setDarkMode("moon");
     } else {
-      setDarkMode("sun")
+      setDarkMode("sun");
     }
   }
   return (
@@ -26,14 +35,29 @@ const Topbar = ({ setPause, pause, setDarkMode }) => {
       >
         Play/Pause
       </button>
+      <ToastContainer
+        icon={false}
+        position="top-center"
+        autoClose={5000}
+        limit={2}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover={false}
+        theme="colored"
+      />
       <div>
-        <input type="checkbox" id="darkMode" onChange={handleDarkMode}/>
-        <label htmlFor="darkMode" className="label">
+        <input type="checkbox" id="darkMode" onChange={handleDarkMode} />
+        <label htmlFor="darkMode" className="label" onClick={darkModeInfo}>
           <span>🌙</span>
           <span>☀️</span>
-          <div className='ball'></div>
+          <div className="ball"></div>
         </label>
       </div>
+
     </header>
   );
 };
