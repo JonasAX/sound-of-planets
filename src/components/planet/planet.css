@@ -1,35 +1,35 @@
 .planet {
-    border: 2px solid grey;
-    background-color: black;
-    border-radius: 20px;
-    width: 400px;
-    height: 300px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px auto;
+  border: 2px solid grey;
+  background-color: black;
+  border-radius: 20px;
+  width: 400px;
+  height: 300px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
 }
 
 .picture {
-    height: 80%;
+  height: 80%;
 }
 
 .planetTitle {
-    font-family: "Zen Dots", cursive;
-    text-transform: uppercase;
+  font-family: "Zen Dots", cursive;
+  text-transform: uppercase;
 }
 
 .grow:hover {
-    transform: scale(1.02);
-    transition: all 0.1s ease-in-out;
+  transform: scale(1.02);
+  transition: all 0.1s ease-in-out;
 }
 
 .grow:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 ::selection {
-    color: grey;
-    background: rgba(128, 128, 128, 0);
-  }
+  color: grey;
+  background: rgba(128, 128, 128, 0);
+}
