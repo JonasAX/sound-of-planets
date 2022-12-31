@@ -26,6 +26,8 @@ import plutoSound from "../../assets/pluto.mp3";
 import Planet from "../planet/Planet";
 import "./solarSystem.css";
 import { useEffect, useState } from "react";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
+import "animate.css";
 
 const planets = {
   moon: {
@@ -129,7 +131,7 @@ const SolarSystem = ({ pause, darkMode }) => {
   );
 
   // The following useEffect will change the first "planet" depending on the
-  // fake "dark mode" selection
+  // "dark mode" selection
   useEffect(() => {
     if (darkMode === "sun") {
       setSunOrMoon(
@@ -164,9 +166,26 @@ const SolarSystem = ({ pause, darkMode }) => {
     }
   }, [pause]);
 
+  // object required by react-transition-group
+  const transitionClasses = {
+    enter: "animate__animated",
+    enterActive: "animate__fadeInTopRight",
+    exit: "animate__animated",
+    exitActive: "animate__fadeOutTopRight",
+  };
+
   return (
     <div className="containerOfPlanets">
-      {sunOrMoon}
+      <SwitchTransition mode={"out-in"}>
+        <CSSTransition
+          key={darkMode}
+          classNames={transitionClasses}
+          timeout={900}
+        >
+          {sunOrMoon}
+        </CSSTransition>
+      </SwitchTransition>
+
       <Planet
         planetName="mercury"
         clicked={planetClicked}
