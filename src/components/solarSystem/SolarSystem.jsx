@@ -121,7 +121,7 @@ const planetClicked = (name) => {
   }
 };
 
-const SolarSystem = ({ pause, darkMode }) => {
+const SolarSystem = ({ pause, darkMode, setIsPlanetClicked }) => {
   const [sunOrMoon, setSunOrMoon] = useState(
     <Planet
       planetName="sun"
@@ -137,6 +137,7 @@ const SolarSystem = ({ pause, darkMode }) => {
       setSunOrMoon(
         <Planet
           planetName="sun"
+          setIsPlanetClicked={setIsPlanetClicked}
           clicked={planetClicked}
           img={planets["sun"]["image"]}
         />
@@ -145,6 +146,7 @@ const SolarSystem = ({ pause, darkMode }) => {
       setSunOrMoon(
         <Planet
           planetName="moon"
+          setIsPlanetClicked={setIsPlanetClicked}
           clicked={planetClicked}
           img={planets["moon"]["image"]}
         />
@@ -188,46 +190,55 @@ const SolarSystem = ({ pause, darkMode }) => {
 
       <Planet
         planetName="mercury"
+        setIsPlanetClicked={setIsPlanetClicked}
         clicked={planetClicked}
         img={planets["mercury"]["image"]}
       />
       <Planet
         planetName="venus"
+        setIsPlanetClicked={setIsPlanetClicked}
         clicked={planetClicked}
         img={planets["venus"]["image"]}
       />
       <Planet
         planetName="mars"
+        setIsPlanetClicked={setIsPlanetClicked}
         clicked={planetClicked}
         img={planets["mars"]["image"]}
       />
       <Planet
         planetName="earth"
+        setIsPlanetClicked={setIsPlanetClicked}
         clicked={planetClicked}
         img={planets["earth"]["image"]}
       />
       <Planet
         planetName="jupiter"
+        setIsPlanetClicked={setIsPlanetClicked}
         clicked={planetClicked}
         img={planets["jupiter"]["image"]}
       />
       <Planet
         planetName="saturn"
+        setIsPlanetClicked={setIsPlanetClicked}
         clicked={planetClicked}
         img={planets["saturn"]["image"]}
       />
       <Planet
         planetName="uranus"
+        setIsPlanetClicked={setIsPlanetClicked}
         clicked={planetClicked}
         img={planets["uranus"]["image"]}
       />
       <Planet
         planetName="neptune"
+        setIsPlanetClicked={setIsPlanetClicked}
         clicked={planetClicked}
         img={planets["neptune"]["image"]}
       />
       <Planet
         planetName="pluto"
+        setIsPlanetClicked={setIsPlanetClicked}
         clicked={planetClicked}
         img={planets["pluto"]["image"]}
       />
