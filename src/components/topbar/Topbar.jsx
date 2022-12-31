@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import "./topbar.css";
 
-const Topbar = ({ setPause, pause, setDarkMode }) => {
+const Topbar = ({ setPause, pause, setDarkMode, isPlanetClicked }) => {
   const [darkModeClicked, setDarkModeClicked] = useState(false);
   function darkModeInfo() {
     if (!darkModeClicked) {
@@ -24,6 +24,10 @@ const Topbar = ({ setPause, pause, setDarkMode }) => {
       <h1>Solar System Sounds</h1>
       <button
         onClick={() => {
+          if (!isPlanetClicked) {
+            toast.warning("Please click on a planet first")
+          }
+
           if (pause === undefined) {
             setPause(true);
           } else if (pause === true) {
