@@ -6,7 +6,7 @@ import venusImage from "../../assets/venus.jpg";
 import earthImage from "../../assets/earth.webp";
 import marsImage from "../../assets/mars.png";
 import jupiterImage from "../../assets/jupiter.png";
-import saturnImage from "../../assets/saturn.gif";
+import saturnImage from "../../assets/saturn.jpg";
 import uranusImage from "../../assets/uranus.png";
 import neptuneImage from "../../assets/neptune.jpg";
 import plutoImage from "../../assets/pluto.jpg";
