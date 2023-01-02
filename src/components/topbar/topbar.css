@@ -69,7 +69,9 @@ button:active {
 label span {
   text-shadow: #444 1px 0 7px;
 }
-
+.Toastify {
+  position: absolute
+}
 .Toastify__toast:first-child {
   font-size: 1.2rem;
    top: 65px;
