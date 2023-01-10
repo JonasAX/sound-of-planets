@@ -1,12 +1,13 @@
 import "./planet.css";
 
-function Planet({ planetName, clicked, img, setIsPlanetClicked }) {
+function Planet({ planetName, clicked, img, setIsPlanetClicked, nodeRef }) {
   function firstClick() {
     setIsPlanetClicked(true);
   }
 
   return (
     <div
+      ref={nodeRef}
       className="planetCard grow"
       onClick={() => {
         clicked(planetName);

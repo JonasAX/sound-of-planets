@@ -1,24 +1,25 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import "./topbar.css";
+import DarkMode from "../../features/toggleDarkMode/ToggleDarkMode.jsx" ;
 
 const Topbar = ({ setPause, pause, setDarkMode, isPlanetClicked }) => {
-  const [darkModeClicked, setDarkModeClicked] = useState(false);
-  function darkModeInfo() {
-    if (!darkModeClicked) {
-      toast.info("This button is not for dark mode, btw.");
-      setDarkModeClicked(true);
-    }
-  }
+  // const [darkModeClicked, setDarkModeClicked] = useState(false);
+  // function darkModeInfo() {
+  //   if (!darkModeClicked) {
+  //     toast.info("This button is not for dark mode, btw.");
+  //     setDarkModeClicked(true);
+  //   }
+  // }
 
-  function handleDarkMode(event) {
-    if (event.target.checked) {
-      setDarkMode("moon");
-    } else {
-      setDarkMode("sun");
-    }
-  }
+  // function handleDarkMode(event) {
+  //   if (event.target.checked) {
+  //     setDarkMode("moon");
+  //   } else {
+  //     setDarkMode("sun");
+  //   }
+  // }
   return (
     <header>
       <h1>Solar System Sounds</h1>
@@ -53,15 +54,7 @@ const Topbar = ({ setPause, pause, setDarkMode, isPlanetClicked }) => {
         pauseOnHover={false}
         theme="colored"
       />
-      <div>
-        <input type="checkbox" id="darkMode" onChange={handleDarkMode} />
-        <label htmlFor="darkMode" className="label" onClick={darkModeInfo}>
-          <span>🌙</span>
-          <span>☀️</span>
-          <div className="ball"></div>
-        </label>
-      </div>
-
+      <DarkMode/>
     </header>
   );
 };

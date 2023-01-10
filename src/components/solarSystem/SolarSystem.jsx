@@ -25,9 +25,11 @@ import plutoSound from "../../assets/pluto.mp3";
 
 import Planet from "../planet/Planet";
 import "./solarSystem.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import "animate.css";
+
+import { useSelector } from "react-redux";
 
 const planets = {
   moon: {
@@ -121,38 +123,40 @@ const planetClicked = (name) => {
   }
 };
 
-const SolarSystem = ({ pause, darkMode, setIsPlanetClicked }) => {
-  const [sunOrMoon, setSunOrMoon] = useState(
+const SolarSystem = ({ pause, setIsPlanetClicked }) => {
+
+
+  const darkModeState = useSelector((state) => state.darkMode.value);
+
+  const moonRef = useRef(null);
+  const moon = (
     <Planet
+      nodeRef={moonRef}
+      planetName="moon"
+      setIsPlanetClicked={setIsPlanetClicked}
+      clicked={planetClicked}
+      img={planets["moon"]["image"]}
+    />
+  );
+  const sunRef = useRef(null);
+  const sun = (
+    <Planet
+      nodeRef={sunRef}
       planetName="sun"
+      setIsPlanetClicked={setIsPlanetClicked}
       clicked={planetClicked}
       img={planets["sun"]["image"]}
     />
   );
+  const nodeRef = darkModeState ? moonRef : sunRef;
 
-  // The following useEffect will change the first "planet" depending on the
-  // "dark mode" selection
-  useEffect(() => {
-    if (darkMode === "sun") {
-      setSunOrMoon(
-        <Planet
-          planetName="sun"
-          setIsPlanetClicked={setIsPlanetClicked}
-          clicked={planetClicked}
-          img={planets["sun"]["image"]}
-        />
-      );
-    } else if (darkMode === "moon") {
-      setSunOrMoon(
-        <Planet
-          planetName="moon"
-          setIsPlanetClicked={setIsPlanetClicked}
-          clicked={planetClicked}
-          img={planets["moon"]["image"]}
-        />
-      );
+  function displaySunOrMoon() {
+    if (darkModeState) {
+      return moon;
+    } else {
+      return sun;
     }
-  }, [darkMode]);
+  }
 
   // The following effect acts when the topbar button is clicked
   // It will play/pause the audio
@@ -180,11 +184,12 @@ const SolarSystem = ({ pause, darkMode, setIsPlanetClicked }) => {
     <div className="containerOfPlanets">
       <SwitchTransition mode={"out-in"}>
         <CSSTransition
-          key={darkMode}
+          nodeRef={nodeRef}
+          key={darkModeState}
           classNames={transitionClasses}
-          timeout={1000}
+          timeout={1400}
         >
-          {sunOrMoon}
+          {displaySunOrMoon()}
         </CSSTransition>
       </SwitchTransition>
 
