@@ -8,18 +8,16 @@ export default function App() {
   // Then it is passed to SolarSystem
   const [pause, setPause] = useState(undefined);
   const [isPlanetClicked, setIsPlanetClicked] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
   return (
     <div className="app">
       <Topbar
         setPause={setPause}
         pause={pause}
-        setDarkMode={setDarkMode}
         isPlanetClicked={isPlanetClicked}
       />
       <SolarSystem
         pause={pause}
-        darkMode={darkMode}
         setIsPlanetClicked={setIsPlanetClicked}
       />
     </div>
