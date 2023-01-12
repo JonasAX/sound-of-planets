@@ -36,13 +36,13 @@ const planets = {
     title: "venus",
     image: venusImage,
   },
-  mars: {
-    title: "mars",
-    image: marsImage,
-  },
   earth: {
     title: "earth",
     image: earthImage,
+  },
+  mars: {
+    title: "mars",
+    image: marsImage,
   },
   jupiter: {
     title: "jupiter",
