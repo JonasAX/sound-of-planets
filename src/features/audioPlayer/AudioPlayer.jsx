@@ -17,17 +17,17 @@ import { useEffect } from "react";
 import { setPlay } from "./audioPlayerSlice";
 
 const playlist = {
-  sun: sunSound,
-  moon: moonSound,
-  mercury: mercurySound,
-  venus: venusSound,
-  earth: earthSound,
-  mars: marsSound,
-  jupiter: jupiterSound,
-  saturn: saturnSound,
-  uranus: uranusSound,
-  neptune: neptuneSound,
-  pluto: plutoSound,
+  sun: { source: sunSound, volume: 0.6 },
+  moon: { source: moonSound, volume: 1 },
+  mercury: { source: mercurySound, volume: 0.1 },
+  venus: { source: venusSound, volume: 1 },
+  earth: { source: earthSound, volume: 0.3 },
+  mars: { source: marsSound, volume: 1 },
+  jupiter: { source: jupiterSound, volume: 1 },
+  saturn: { source: saturnSound, volume: 0.6 },
+  uranus: { source: uranusSound, volume: 1 },
+  neptune: { source: neptuneSound, volume: 1 },
+  pluto: { source: plutoSound, volume: 1 },
 };
 
 let audio = new Audio();
@@ -45,10 +45,11 @@ export default function AudioPlayer() {
     // audioTrack is undefined before the first click.
     // if statement is necessary to avoid a bug.
     if (audioTrack) {
-      console.log('executed')
-      const mostRecentAudioSrc = playlist[audioTrack];
+      console.log("executed");
+      const mostRecentAudioSrc = playlist[audioTrack]["source"];
       audio.load();
       audio = new Audio(mostRecentAudioSrc);
+      audio.volume = playlist[audioTrack]["volume"]
       play();
     }
   }, [audioTrack]);
