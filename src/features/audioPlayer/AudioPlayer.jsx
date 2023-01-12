@@ -14,7 +14,7 @@ import plutoSound from "../../assets/pluto.mp3";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { setPlay } from "./audioPlayerSlice";
+import { setPlay, setPause, setPauseSilently } from "./audioPlayerSlice";
 
 const playlist = {
   sun: { source: sunSound, volume: 0.6 },
@@ -35,30 +35,29 @@ let audio = new Audio();
 export default function AudioPlayer() {
   const audioTrack = useSelector((state) => state.audioPlayer.audioTrack);
   const isPlaying = useSelector((state) => state.audioPlayer.isPlaying);
-  const dispatch = useDispatch();
+  const triggerForIsPlaying = useSelector((state) => state.audioPlayer.triggerForIsPlaying);
 
-  function play() {
-    dispatch(setPlay());
-  }
+  const dispatch = useDispatch();
 
   useEffect(() => {
     // audioTrack is undefined before the first click.
-    // if statement is necessary to avoid a bug.
+    // Put code inside if statement is necessary to avoid a bug.
     if (audioTrack) {
-      console.log("executed");
       const mostRecentAudioSrc = playlist[audioTrack]["source"];
+      dispatch(setPause())
       audio.load();
       audio = new Audio(mostRecentAudioSrc);
       audio.volume = playlist[audioTrack]["volume"]
-      play();
+      audio.onended = () => dispatch(setPauseSilently())
+      dispatch(setPlay());
     }
   }, [audioTrack]);
 
   useEffect(() => {
     if (audioTrack) {
-      isPlaying ? audio.play() : audio.load();
+      isPlaying ? audio.play() : audio.pause();
     }
-  }, [isPlaying]);
+  }, [triggerForIsPlaying]);
 
   return;
 }
