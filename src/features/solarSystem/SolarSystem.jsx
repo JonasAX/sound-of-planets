@@ -10,18 +10,6 @@ import saturnImage from "../../assets/saturn.jpg";
 import uranusImage from "../../assets/uranus.png";
 import neptuneImage from "../../assets/neptune.jpg";
 import plutoImage from "../../assets/pluto.jpg";
-// sounds
-import sunSound from "../../assets/sun.mp3";
-import moonSound from "../../assets/moon.mp3";
-import mercurySound from "../../assets/mercury.mp3";
-import venusSound from "../../assets/venus.mp3";
-import earthSound from "../../assets/earth.mp3";
-import marsSound from "../../assets/mars.mp3";
-import jupiterSound from "../../assets/jupiter.mp3";
-import saturnSound from "../../assets/saturn.mp3";
-import uranusSound from "../../assets/uranus.mp3";
-import neptuneSound from "../../assets/neptune.mp3";
-import plutoSound from "../../assets/pluto.mp3";
 
 import Planet from "./planet/Planet";
 import "./solarSystem.css";
@@ -35,57 +23,46 @@ const planets = {
   moon: {
     title: "moon",
     image: moonImage,
-    volume: 1,
   },
   sun: {
     title: "sun",
     image: sunImage,
-    volume: 0.6,
   },
   mercury: {
     title: "mercury",
     image: mercuryImage,
-    volume: 0.1,
   },
   venus: {
     title: "venus",
     image: venusImage,
-    volume: 1,
   },
   mars: {
     title: "mars",
     image: marsImage,
-    volume: 1,
   },
   earth: {
     title: "earth",
     image: earthImage,
-    volume: 0.3,
   },
   jupiter: {
     title: "jupiter",
     image: jupiterImage,
-    volume: 1,
   },
   saturn: {
     title: "saturn",
     image: saturnImage,
-    volume: 0.7,
   },
   uranus: {
     title: "uranus",
     image: uranusImage,
-    volume: 1,
   },
   neptune: {
     title: "neptune",
     image: neptuneImage,
-    volume: 1,
   },
   pluto: {
     title: "pluto",
     image: plutoImage,
-    volume: 1,
   },
 };
 
