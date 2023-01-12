@@ -23,7 +23,7 @@ import uranusSound from "../../assets/uranus.mp3";
 import neptuneSound from "../../assets/neptune.mp3";
 import plutoSound from "../../assets/pluto.mp3";
 
-import Planet from "../planet/Planet";
+import Planet from "./planet/Planet";
 import "./solarSystem.css";
 import { useRef } from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
@@ -35,67 +35,56 @@ const planets = {
   moon: {
     title: "moon",
     image: moonImage,
-    sound: moonSound,
     volume: 1,
   },
   sun: {
     title: "sun",
     image: sunImage,
-    sound: sunSound,
     volume: 0.6,
   },
   mercury: {
     title: "mercury",
     image: mercuryImage,
-    sound: mercurySound,
     volume: 0.1,
   },
   venus: {
     title: "venus",
     image: venusImage,
-    sound: venusSound,
     volume: 1,
   },
   mars: {
     title: "mars",
     image: marsImage,
-    sound: marsSound,
     volume: 1,
   },
   earth: {
     title: "earth",
     image: earthImage,
-    sound: earthSound,
     volume: 0.3,
   },
   jupiter: {
     title: "jupiter",
     image: jupiterImage,
-    sound: jupiterSound,
     volume: 1,
   },
   saturn: {
     title: "saturn",
     image: saturnImage,
-    sound: saturnSound,
     volume: 0.7,
   },
   uranus: {
     title: "uranus",
     image: uranusImage,
-    sound: uranusSound,
     volume: 1,
   },
   neptune: {
     title: "neptune",
     image: neptuneImage,
-    sound: neptuneSound,
     volume: 1,
   },
   pluto: {
     title: "pluto",
     image: plutoImage,
-    sound: plutoSound,
     volume: 1,
   },
 };

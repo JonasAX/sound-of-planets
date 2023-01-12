@@ -1,5 +1,5 @@
 import "./App.css";
-import SolarSystem from "./components/solarSystem/SolarSystem";
+import SolarSystem from "./features/solarSystem/SolarSystem";
 import Topbar from "./components/topbar/Topbar";
 import InvisibleAudioPlayer from "./features/audioPlayer/AudioPlayer";
 
