@@ -14,6 +14,7 @@ import plutoSound from "../../assets/pluto.mp3";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { setPlay } from "./audioPlayerSlice";
 
 const playlist = {
   sun: sunSound,
@@ -29,18 +30,15 @@ const playlist = {
   pluto: plutoSound,
 };
 
-
 let audio = new Audio();
 
 export default function AudioPlayer() {
   const audioTrack = useSelector((state) => state.audioPlayer.audioTrack);
   const isPlaying = useSelector((state) => state.audioPlayer.isPlaying);
+  const dispatch = useDispatch();
 
   function play() {
-    audio.play();
-  }
-  function stop() {
-    audio.load();
+    dispatch(setPlay());
   }
 
   useEffect(() => {
@@ -48,14 +46,16 @@ export default function AudioPlayer() {
     // if statement is necessary to avoid a bug.
     if (audioTrack) {
       const mostRecentAudioSrc = playlist[audioTrack];
-      stop();
+      audio.load();
       audio = new Audio(mostRecentAudioSrc);
       play();
     }
   }, [audioTrack]);
 
   useEffect(() => {
-    isPlaying ? play() : stop();
+    if (audioTrack) {
+      isPlaying ? audio.play() : audio.load();
+    }
   }, [isPlaying]);
 
   // useEffect(() => {
@@ -97,5 +97,5 @@ export default function AudioPlayer() {
   //   }
   // }, [audioTrack]);
 
-  return
+  return;
 }

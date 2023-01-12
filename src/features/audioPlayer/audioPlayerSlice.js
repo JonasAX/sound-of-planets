@@ -3,26 +3,23 @@ import { createSlice } from "@reduxjs/toolkit";
 export const audioPlayerSlice = createSlice({
   name: "audioPlayer",
   initialState: {
-    lastPlanetClicked: undefined,
     isPlaying: false,
     audioTrack: undefined,
   },
   reducers: {
     setAudioTrack: (state, action) => {
       // it will create a play/pause behaviour
-      if ( state.audioTrack === action.payload ) {
-        state.isPlaying = !state.isPlaying
+      if (state.audioTrack === action.payload) {
+        state.isPlaying = !state.isPlaying;
       } else {
-        state.audioTrack = action.payload
+        state.audioTrack = action.payload;
       }
-      console.log('setAudioTrack')
     },
-    togglePlay: (state) => {
-      state.isPlaying = !state.isPlaying;
-    },
+    setPause: (state) => {state.isPlaying = false},
+    setPlay: (state) => {state.isPlaying = true}
   },
 });
 
-export const { setAudioTrack, togglePlay } = audioPlayerSlice.actions;
+export const { setAudioTrack, setPause, setPlay } = audioPlayerSlice.actions;
 
 export default audioPlayerSlice.reducer;
