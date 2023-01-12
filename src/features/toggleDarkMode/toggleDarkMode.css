@@ -1,8 +1,8 @@
-#darkMode2 {
+#darkMode {
   opacity: 0;
   position: absolute;
 }
-.label2 {
+.label {
   width: 60px;
   height: 24px;
   background-color: #bbb;
@@ -15,7 +15,7 @@
   position: relative;
   transform: scale(1.2);
 }
-.ball2 {
+.ball {
   width: 24px;
   height: 24px;
   background-color: #222;
@@ -25,6 +25,6 @@
   border-radius: 50%;
   transition: transform 0.2s linear;
 }
-#darkMode2:checked + label .ball2 {
+#darkMode:checked + label .ball {
   transform: translateX(42px);
 }

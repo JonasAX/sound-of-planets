@@ -25,7 +25,7 @@ import plutoSound from "../../assets/pluto.mp3";
 
 import Planet from "../planet/Planet";
 import "./solarSystem.css";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import "animate.css";
 
@@ -100,32 +100,7 @@ const planets = {
   },
 };
 
-let audio = new Audio();
-
-const planetClicked = (name) => {
-  // Check if the audio is playing and if it`s the same "src"
-  const isPlaying = () => !audio.paused;
-  const isTheSame = () =>
-    audio.getAttribute("src") === planets[name]["sound"] ? true : false;
-
-  // The following logic will add Play/Pause behavior
-  if (isTheSame() && isPlaying()) {
-    audio.load();
-    return;
-  } else if (isTheSame() && !isPlaying()) {
-    audio.play();
-    return;
-  } else {
-    audio.load();
-    audio = new Audio(planets[name]["sound"]);
-    audio.volume = planets[name]["volume"];
-    audio.play();
-  }
-};
-
-const SolarSystem = ({ pause, setIsPlanetClicked }) => {
-
-
+const SolarSystem = () => {
   const darkModeState = useSelector((state) => state.darkMode.value);
 
   const moonRef = useRef(null);
@@ -133,20 +108,12 @@ const SolarSystem = ({ pause, setIsPlanetClicked }) => {
     <Planet
       nodeRef={moonRef}
       planetName="moon"
-      setIsPlanetClicked={setIsPlanetClicked}
-      clicked={planetClicked}
       img={planets["moon"]["image"]}
     />
   );
   const sunRef = useRef(null);
   const sun = (
-    <Planet
-      nodeRef={sunRef}
-      planetName="sun"
-      setIsPlanetClicked={setIsPlanetClicked}
-      clicked={planetClicked}
-      img={planets["sun"]["image"]}
-    />
+    <Planet nodeRef={sunRef} planetName="sun" img={planets["sun"]["image"]} />
   );
   const nodeRef = darkModeState ? moonRef : sunRef;
 
@@ -157,20 +124,6 @@ const SolarSystem = ({ pause, setIsPlanetClicked }) => {
       return sun;
     }
   }
-
-  // The following effect acts when the topbar button is clicked
-  // It will play/pause the audio
-  useEffect(() => {
-    // The button have 3 states. "undefined" is necessary because browsers triggers an error
-    // when audio.pause() is executed before user interaction.
-    if (pause === undefined) {
-      return;
-    } else if (pause === true) {
-      audio.pause();
-    } else if (pause === false) {
-      audio.play();
-    }
-  }, [pause]);
 
   // object required by react-transition-group
   const transitionClasses = {
@@ -193,60 +146,15 @@ const SolarSystem = ({ pause, setIsPlanetClicked }) => {
         </CSSTransition>
       </SwitchTransition>
 
-      <Planet
-        planetName="mercury"
-        setIsPlanetClicked={setIsPlanetClicked}
-        clicked={planetClicked}
-        img={planets["mercury"]["image"]}
-      />
-      <Planet
-        planetName="venus"
-        setIsPlanetClicked={setIsPlanetClicked}
-        clicked={planetClicked}
-        img={planets["venus"]["image"]}
-      />
-      <Planet
-        planetName="mars"
-        setIsPlanetClicked={setIsPlanetClicked}
-        clicked={planetClicked}
-        img={planets["mars"]["image"]}
-      />
-      <Planet
-        planetName="earth"
-        setIsPlanetClicked={setIsPlanetClicked}
-        clicked={planetClicked}
-        img={planets["earth"]["image"]}
-      />
-      <Planet
-        planetName="jupiter"
-        setIsPlanetClicked={setIsPlanetClicked}
-        clicked={planetClicked}
-        img={planets["jupiter"]["image"]}
-      />
-      <Planet
-        planetName="saturn"
-        setIsPlanetClicked={setIsPlanetClicked}
-        clicked={planetClicked}
-        img={planets["saturn"]["image"]}
-      />
-      <Planet
-        planetName="uranus"
-        setIsPlanetClicked={setIsPlanetClicked}
-        clicked={planetClicked}
-        img={planets["uranus"]["image"]}
-      />
-      <Planet
-        planetName="neptune"
-        setIsPlanetClicked={setIsPlanetClicked}
-        clicked={planetClicked}
-        img={planets["neptune"]["image"]}
-      />
-      <Planet
-        planetName="pluto"
-        setIsPlanetClicked={setIsPlanetClicked}
-        clicked={planetClicked}
-        img={planets["pluto"]["image"]}
-      />
+      <Planet planetName="mercury" img={planets["mercury"]["image"]} />
+      <Planet planetName="venus" img={planets["venus"]["image"]} />
+      <Planet planetName="mars" img={planets["mars"]["image"]} />
+      <Planet planetName="earth" img={planets["earth"]["image"]} />
+      <Planet planetName="jupiter" img={planets["jupiter"]["image"]} />
+      <Planet planetName="saturn" img={planets["saturn"]["image"]} />
+      <Planet planetName="uranus" img={planets["uranus"]["image"]} />
+      <Planet planetName="neptune" img={planets["neptune"]["image"]} />
+      <Planet planetName="pluto" img={planets["pluto"]["image"]} />
     </div>
   );
 };
