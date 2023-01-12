@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { setAudioTrack, togglePlay } from "../../features/audioPlayer/audioPlayerSlice";
+import { setAudioTrack } from "../../features/audioPlayer/audioPlayerSlice";
 import "./planet.css";
 
 function Planet({ planetName, clicked, img, nodeRef }) {

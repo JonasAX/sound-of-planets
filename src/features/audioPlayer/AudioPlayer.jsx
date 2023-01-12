@@ -58,44 +58,5 @@ export default function AudioPlayer() {
     }
   }, [isPlaying]);
 
-  // useEffect(() => {
-  //   const userHasNotClickedYet = audioTrack === undefined;
-  //   if (userHasNotClickedYet) {
-  //     // do nothing
-  //     return;
-  //   } else {
-  //     const audioAlreadyUpdated =
-  //       audio.getAttribute("src") === mostRecentAudioSrc;
-  //     const audioIsPlaying = !audio.paused;
-
-  //     function play() {
-  //       audio.play();
-  //     }
-  //     function stop() {
-  //       audio.load();
-  //     }
-  //     function updateAudio() {
-  //       stop();
-  //       audio = new Audio(mostRecentAudioSrc);
-  //       // audio.volume = planets[name]["volume"];
-  //     }
-
-  //     // The objective here is to make a play/pause behavior
-  //     if (audioAlreadyUpdated && audioIsPlaying) {
-  //       stop();
-  //       console.log("Logic 1");
-  //       return;
-  //     } else if (audioAlreadyUpdated && !audioIsPlaying) {
-  //       play();
-  //       console.log("Logic 2");
-  //       return;
-  //     } else {
-  //       updateAudio();
-  //       play();
-  //       console.log("Logic 3");
-  //     }
-  //   }
-  // }, [audioTrack]);
-
   return;
 }
