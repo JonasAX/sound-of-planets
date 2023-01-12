@@ -1,6 +1,7 @@
 import "./App.css";
 import SolarSystem from "./components/solarSystem/SolarSystem";
 import Topbar from "./components/topbar/Topbar";
+import InvisibleAudioPlayer from "./features/audioPlayer/AudioPlayer"
 import { useState } from "react";
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
   // const [darkMode, setDarkMode] = useState(false);
   return (
     <div className="app">
+      <InvisibleAudioPlayer/>
       <Topbar
         setPause={setPause}
         pause={pause}

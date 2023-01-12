@@ -100,28 +100,30 @@ const planets = {
   },
 };
 
-let audio = new Audio();
+// let audio = new Audio();
 
-const planetClicked = (name) => {
-  // Check if the audio is playing and if it`s the same "src"
-  const isPlaying = () => !audio.paused;
-  const isTheSame = () =>
-    audio.getAttribute("src") === planets[name]["sound"] ? true : false;
+// const planetClicked = (name) => {
+//   // Check if the audio is playing and if it`s the same "src"
+//   const isPlaying = () => !audio.paused;
+//   const isTheSame = () =>
+//     audio.getAttribute("src") === planets[name]["sound"] ? true : false;
 
-  // The following logic will add Play/Pause behavior
-  if (isTheSame() && isPlaying()) {
-    audio.load();
-    return;
-  } else if (isTheSame() && !isPlaying()) {
-    audio.play();
-    return;
-  } else {
-    audio.load();
-    audio = new Audio(planets[name]["sound"]);
-    audio.volume = planets[name]["volume"];
-    audio.play();
-  }
-};
+//   // The following logic will add Play/Pause behavior
+//   if (isTheSame() && isPlaying()) {
+//     audio.load();
+//     return;
+//   } else if (isTheSame() && !isPlaying()) {
+//     audio.play();
+//     return;
+//   } else {
+//     audio.load();
+//     audio = new Audio(planets[name]["sound"]);
+//     audio.volume = planets[name]["volume"];
+//     audio.play();
+//   }
+// };
+
+const planetClicked = () => {}
 
 const SolarSystem = ({ pause, setIsPlanetClicked }) => {
 
@@ -160,17 +162,17 @@ const SolarSystem = ({ pause, setIsPlanetClicked }) => {
 
   // The following effect acts when the topbar button is clicked
   // It will play/pause the audio
-  useEffect(() => {
-    // The button have 3 states. "undefined" is necessary because browsers triggers an error
-    // when audio.pause() is executed before user interaction.
-    if (pause === undefined) {
-      return;
-    } else if (pause === true) {
-      audio.pause();
-    } else if (pause === false) {
-      audio.play();
-    }
-  }, [pause]);
+  // useEffect(() => {
+  //   // The button have 3 states. "undefined" is necessary because browsers triggers an error
+  //   // when audio.pause() is executed before user interaction.
+  //   if (pause === undefined) {
+  //     return;
+  //   } else if (pause === true) {
+  //     audio.pause();
+  //   } else if (pause === false) {
+  //     audio.play();
+  //   }
+  // }, [pause]);
 
   // object required by react-transition-group
   const transitionClasses = {
