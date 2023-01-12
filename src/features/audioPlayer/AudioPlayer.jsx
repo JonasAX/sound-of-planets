@@ -45,6 +45,7 @@ export default function AudioPlayer() {
     // audioTrack is undefined before the first click.
     // if statement is necessary to avoid a bug.
     if (audioTrack) {
+      console.log('executed')
       const mostRecentAudioSrc = playlist[audioTrack];
       audio.load();
       audio = new Audio(mostRecentAudioSrc);
