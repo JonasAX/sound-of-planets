@@ -64,6 +64,15 @@ export default function SunOrMoon() {
     }
   }
 
+  function goTop() {
+    // window.scroll(0,0)
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant',
+    });
+  }
+
   return (
     <SwitchTransition mode={"out-in"}>
       <CSSTransition
@@ -71,6 +80,7 @@ export default function SunOrMoon() {
         key={darkModeState}
         classNames={transitionClasses}
         timeout={1400}
+        onExit={goTop}
       >
         {displaySunOrMoon()}
       </CSSTransition>

@@ -6,6 +6,7 @@ import { toggleDarkMode } from "./toggleDarkModeSlice";
 export default function ToggleDarkMode() {
   const dispatch = useDispatch();
   const toggle = () => {
+    // window.scroll(0,0)
     dispatch(toggleDarkMode());
   };
 
