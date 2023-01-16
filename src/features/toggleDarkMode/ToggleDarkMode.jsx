@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { toggleDarkMode } from "./toggleDarkModeSlice";
 // import { toast } from "react-toastify";
 
-
 export default function ToggleDarkMode() {
   const dispatch = useDispatch();
   const toggle = () => {
