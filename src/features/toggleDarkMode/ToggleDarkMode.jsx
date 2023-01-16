@@ -6,7 +6,6 @@ import { toggleDarkMode } from "./toggleDarkModeSlice";
 export default function ToggleDarkMode() {
   const dispatch = useDispatch();
   const toggle = () => {
-    // window.scroll(0,0)
     dispatch(toggleDarkMode());
   };
 
@@ -16,28 +15,6 @@ export default function ToggleDarkMode() {
   //     setDarkModeClicked(true);
   //   }
   // }
-
-  // window.onload = function () {
-  //   console.log("onload");
-
-  //   const callback = (entries, observer) => {
-  //     console.log(1);
-  //     // document.querySelector("#sun").style.background = "pink"
-
-  //     // entries.forEach((entry) => {
-  //     //   console.log(entry);
-  //     // });
-  //   };
-  //   const options = {
-  //     root: document.body,
-  //     rootMargin: "0px",
-  //     threshold: 1,
-  //   };
-  //   const observer = new IntersectionObserver(callback, options);
-
-  //   const sunOrMoonPlanetCard = document.querySelector("#sun");
-  //   observer.observe(sunOrMoonPlanetCard);
-  // };
 
   return (
     <div>
