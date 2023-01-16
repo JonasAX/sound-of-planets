@@ -1,21 +1,18 @@
 import { useDispatch } from "react-redux";
-import { setAudioTrack } from "../../audioPlayer/audioPlayerSlice"
+import { setAudioTrack } from "../../audioPlayer/audioPlayerSlice";
 import "./planet.css";
 
-function Planet({ planetName, img, nodeRef }) {
+export default function Planet({ planetName, img }) {
   const dispatch = useDispatch();
 
   const playThisPlanetAudio = () => {
-    dispatch(setAudioTrack(planetName))
-  }
+    dispatch(setAudioTrack(planetName));
+  };
 
   return (
     <div
-      ref={nodeRef}
       className="planetCard grow"
-      onClick={() => {
-        playThisPlanetAudio();
-      }}
+      onClick={playThisPlanetAudio}
     >
       <p className="planetTitle">{planetName}</p>
       <div className="pictureWrapper">
@@ -24,5 +21,3 @@ function Planet({ planetName, img, nodeRef }) {
     </div>
   );
 }
-
-export default Planet;
