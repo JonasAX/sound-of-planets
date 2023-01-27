@@ -22,7 +22,7 @@ export default function ToggleDarkMode() {
   return (
     <div>
       <input type="checkbox" id="darkMode" onChange={toggle} />
-      <label htmlFor="darkMode" className="label" onClick={() => darkModeInfo()} >
+      <label htmlFor="darkMode" className="label" onClick={darkModeInfo} >
         <span>🌙</span>
         <span>☀️</span>
         <div className="ball"></div>
