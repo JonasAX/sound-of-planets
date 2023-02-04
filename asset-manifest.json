@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sound-of-planets/static/css/main.c4195a09.css",
-    "main.js": "/sound-of-planets/static/js/main.07471428.js",
+    "main.css": "/sound-of-planets/static/css/main.b8dfe81f.css",
+    "main.js": "/sound-of-planets/static/js/main.c153da64.js",
     "static/js/787.1e1b5c88.chunk.js": "/sound-of-planets/static/js/787.1e1b5c88.chunk.js",
     "static/media/jupiter.png": "/sound-of-planets/static/media/jupiter.d616e5625091364e7e28.png",
     "static/media/mars.mp3": "/sound-of-planets/static/media/mars.1ae9c029bc41a0cbf209.mp3",
@@ -23,15 +23,16 @@
     "static/media/pluto.jpg": "/sound-of-planets/static/media/pluto.a0e1ef0be286f31c7607.jpg",
     "static/media/neptune.jpg": "/sound-of-planets/static/media/neptune.45b7e2d3ec3e3c687f82.jpg",
     "static/media/saturn.jpg": "/sound-of-planets/static/media/saturn.dd0814d428a42f0cf04e.jpg",
+    "static/media/audio.gif": "/sound-of-planets/static/media/audio.4e80ab9d2f8b5913eec0.gif",
     "static/media/sun.jpg": "/sound-of-planets/static/media/sun.98aed064ff49390ec398.jpg",
     "static/media/moon.jpg": "/sound-of-planets/static/media/moon.1d0e74aa1ca397711873.jpg",
     "index.html": "/sound-of-planets/index.html",
-    "main.c4195a09.css.map": "/sound-of-planets/static/css/main.c4195a09.css.map",
-    "main.07471428.js.map": "/sound-of-planets/static/js/main.07471428.js.map",
+    "main.b8dfe81f.css.map": "/sound-of-planets/static/css/main.b8dfe81f.css.map",
+    "main.c153da64.js.map": "/sound-of-planets/static/js/main.c153da64.js.map",
     "787.1e1b5c88.chunk.js.map": "/sound-of-planets/static/js/787.1e1b5c88.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4195a09.css",
-    "static/js/main.07471428.js"
+    "static/css/main.b8dfe81f.css",
+    "static/js/main.c153da64.js"
   ]
 }
